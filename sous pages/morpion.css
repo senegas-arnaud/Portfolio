@@ -1,0 +1,79 @@
+body{
+    background-image:url(../../../Pictures/fondportfolio.jpg) ;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: x-large;
+    background-color: black;
+
+}
+
+span{
+    display: inline-block;
+    background:linear-gradient(to left, #f5e904,#f5e904 50%, #15d5ee 75%, #15d5ee 75%) ;
+    font-family:cursive;
+    background-clip: text;  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.picts{
+    width: 99%;
+    height: 700px;
+    background-image: url(../../../Pictures/fondportfolio.jpg);
+    margin-top: 1%;
+}
+
+img{width: 100%; height: 100%;}
+
+.pict1{
+    display: flex;
+    flex-direction: column;
+    width: 22.5%;
+    height: 45%;
+    margin-left: 5%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.pict2{
+    display: flex;
+    flex-direction: column;
+    width: 22.5%;
+    height: 45%;
+    margin-left: 28%;
+    margin-top: -21.05%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.pict3{
+    display: flex;
+    flex-direction: column;
+    width: 43%;
+    height: 94%;
+    margin-left: 55%;
+    margin-top: -21.05%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.pict4{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 47%;
+    margin-top: -22.25%;
+    text-align: center;
+    background-color: black;
+    margin-left: 2.5%;
+    color: white;
+}
