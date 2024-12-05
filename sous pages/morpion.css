@@ -1,21 +1,27 @@
 body{
-    background-image:url(../../../Pictures/fondportfolio.jpg) ;
+    background-color: rgb(31,31,31) ;
     width: 100%;
     height: 100%;
 }
 
 header{
-    width: 100%;
+    width: 101%;
     height: 10%;
     text-align: center;
     font-size: x-large;
-    background-color: black;
-
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: -1%;
+    border-style: double;
+    border-color: #000;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    filter: drop-shadow(20px 20px 4px #000);
 }
 
 span{
     display: inline-block;
-    background:linear-gradient(to left, #f5e904,#f5e904 50%, #15d5ee 75%, #15d5ee 75%) ;
+    background:linear-gradient(to left, #848080,#00f0f0 50%, #00f0f0 75%, #00f0f0 75%) ;
     font-family:cursive;
     background-clip: text;  
     -webkit-background-clip: text;
@@ -25,55 +31,141 @@ span{
 .picts{
     width: 99%;
     height: 700px;
-    background-image: url(../../../Pictures/fondportfolio.jpg);
-    margin-top: 1%;
+    background:rgba(255, 0, 0, 0);
+    margin-top: 1.5%;
 }
 
 img{width: 100%; height: 100%;}
 
 .pict1{
     display: flex;
-    flex-direction: column;
     width: 22.5%;
     height: 45%;
     margin-left: 5%;
     text-align: center;
     background-color: black;
     color: white;
+    position:relative;
 }
 
 .pict2{
     display: flex;
-    flex-direction: column;
     width: 22.5%;
     height: 45%;
     margin-left: 28%;
     margin-top: -21.05%;
     text-align: center;
     background-color: black;
-    color: white;
+    color: whitesmoke;
+    position: relative;
 }
 
 .pict3{
     display: flex;
-    flex-direction: column;
-    width: 43%;
-    height: 94%;
-    margin-left: 55%;
-    margin-top: -21.05%;
+    width: 44%;
+    height: 90.25%;
+    margin-left: 51.5%;
+    margin-top: -20.8%;
     text-align: center;
     background-color: black;
-    color: white;
+    color: whitesmoke;
+    position: relative;
+    img{height: 100%;}
 }
 
 .pict4{
     display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 47%;
-    margin-top: -22.25%;
+    width: 22.5%;
+    height: 45%;
+    margin-top: -20.85%;
     text-align: center;
     background-color: black;
-    margin-left: 2.5%;
-    color: white;
+    margin-left: 5%;
+    color: whitesmoke;
+    position: relative;
+    img{height: 100%;}
 }
+
+.pict5{
+    display: flex;
+    flex-direction: row;
+    width: 22.5%;
+    height: 45%;
+    margin-top: -21%;
+    margin-left: 28%;
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+    img{height: 100%;width: 100%;}
+}
+.pict1::before, .pict1::after, .pict2::before,.pict2::after,.pict3::before,.pict3::after,.pict4::before,.pict4::after,.pict5::before,.pict5::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    background: linear-gradient(45deg,#848080,#00f0f0,#0000ff,#848080,#00f0f0,#0000ff,#848080);
+    width: 100%;
+    height: 100%;
+    background-size: 500%;
+    z-index: -2;
+    transform: scale(1.02);
+    animation:animate 20s infinite;
+}
+
+.pict1::after,.pict2::after,.pict3::after,.pict4::after,.pict5::after{
+    filter:blur(10px);
+}
+
+@keyframes animate{
+    0% {background-position: 0 0;}
+    50%{background-position: 300% 0;}
+    100%{background-position: 0 0;}
+}
+
+.pict1 img,.pict2 img,.pict3 img,.pict4 img,.pict5 img{
+    transition:opacity 0.3 ease;
+    position: absolute;
+}
+
+.pict1 .img1, .pict2 .img1,.pict3 .img1,.pict4 .img1,.pict5 .img1{
+    opacity:1;
+}
+
+.pict1 .img2,.pict2 .img2,.pict3 .img2,.pict4 .img2,.pict5 .img2{
+    opacity: 0;
+}
+
+.pict1:hover .img1,.pict2:hover .img1,.pict3:hover .img1,.pict4:hover .img1,.pict5:hover .img1{
+    opacity: 0;
+}
+
+.pict1:hover .img2,.pict2:hover .img2 ,.pict3:hover .img2,.pict4:hover .img2,.pict5:hover .img2{
+    opacity: 1;
+}
+
+.img2{
+    filter: blur(3px);
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    height: 95%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+.text:hover{
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+}
+
+
