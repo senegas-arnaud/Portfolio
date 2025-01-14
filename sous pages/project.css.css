@@ -1,0 +1,75 @@
+body{background-image:url(../../../Pictures/fondportfolio.jpg) ;
+width: 100%;
+height: 100%;}
+
+header{background-color: rgba(137, 43, 226, 0);
+    text-align: center;
+    font-size: x-large;
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    border-style: double;
+    border-radius: 10px;
+    width: 25%;
+    margin-left: 37.5%;
+}
+
+
+span{
+    display: inline-block;
+    background:linear-gradient(to left, #f5e904,#f5e904 50%, #15d5ee 75%, #15d5ee 75%) ;
+    font-family:cursive;
+    background-clip: text;  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projects{display: flex;
+    margin-top: 100px;
+    background-color: rgba(165, 42, 42, 0);
+    width: 100%;
+    height: 400px;
+    justify-content: space-around;
+    position: relative;
+}
+
+.project{display:flex;
+    background-color: rgba(0, 255, 255, 0);
+    border-radius: 50px;
+    width: 40%;
+    height: 100%;
+    justify-content: space-around;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.project img{
+    transition:opacity 0.3 ease;
+    position: absolute;
+}
+
+.project .img1{
+    opacity:1;
+}
+
+.project .img2{
+    opacity: 0;
+}
+
+.project:hover .img1{
+    opacity: 0;
+}
+
+.project:hover .img2{
+    opacity: 1;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    border-style: double;
+    border-color: black;
+}
