@@ -27,14 +27,14 @@ span{
 .picts{
     display: flex;
     background-color: rgba(0, 0, 255, 0);
-    width: 90%;
+    width: 96%;
     height: 600px;
-    margin-left: 5%;
-    margin-top: 2%;
-    position: relative;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 4%;
 }
 
-.picts::before, .picts::after{
+.pict1::before, .pict1::after, .pict2::before, .pict2::after, .pict3::before, .pict3::after, .pict4::before, .pict4::after{
     content:'';
     position:absolute;
     top:0;
@@ -48,58 +48,58 @@ span{
     animation:animate 20s infinite;
 }
 
-.picts::after{
+.pict1::after,.pict2::after,.pict3::after,.pict4::after,.pict5::after{
     filter:blur(10px);
 }
 
+
+@keyframes animate{
+    0% {background-position: 0 0;}
+    50%{background-position: 300% 0;}
+    100%{background-position: 0 0;}
+}
+
+
 .pict1{
-    background-color: black;
-    width: 100%;
-    height: 49.5%;
+    background-color: rgba(0, 0, 0, 0);
+    width: 23%;
+    height: 80%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
     img{width: 100%;height: 100%;}
-    position: relative;
+    position :absolute;
 }
 
 .pict2{
-    background-color: aqua;
-    width: 100%;
-    height: 49.5%;
-    margin-top: 1%;
+    background-color: rgba(0, 255, 255, 0);
+    width: 23%;
+    height: 80%;
+    margin-left: 25.5%;
+    margin-right: 0.5%;
     img{width: 100%;height: 100%;}
-    position: relative;
+    position :absolute;
 }
 
 .pict3{
-    background-color: white;
-    width: 100%;
-    height: 49.5%;
+    background-color: rgba(255, 255, 255, 0);
+    width: 23%;
+    height: 80%;
+    margin-left: 50.5%;
+    margin-right: 0.5%;
     img{width: 100%;height: 100%;}
-    position: relative;
+    position :absolute;
 }
 
 .pict4{
-    background-color: red;
-    width: 100%;
-    height: 49.5%;
-    margin-top: 1%;
+    background-color: rgba(255, 0, 0, 0);
+    width: 23%;
+    height: 80%;
+    margin-left: 75.5%;
+    margin-right: 0.5%;
     img{width: 100%;height: 100%;}
-    position: relative;
+    position :absolute;
 }
 
-.picts1{
-    display: flex;
-    flex-direction: column;
-    width: 99.75%;
-    height: 100%;
-}
-
-.picts2{
-    display: flex;
-    flex-direction: column;
-    width: 99.75%;
-    height: 100%;
-    margin-left: 0.5%;
-}
 
 .pict1 img,.pict2 img,.pict3 img,.pict4 img{
     transition:opacity 0.3 ease;
@@ -120,9 +120,31 @@ span{
 
 .pict1:hover .img2,.pict2:hover .img2 ,.pict3:hover .img2,.pict4:hover .img2{
     opacity: 1;
-    scale: 1.2;
+}
+
+.img2{
+    filter: blur(3px);
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
     z-index: 1;
-    border-color: #000;
-    filter: drop-shadow(20px 20px 4px #000);
-    transition: all 0.5s ease;
+    width: 90%;
+    height: 95%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.text:hover{
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
 }

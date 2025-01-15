@@ -123,8 +123,8 @@ header{width: 100%;
 .project{display: flex;
     background-color: rgba(137, 43, 226, 0);
     justify-content:space-evenly;
-    width: 50%;
-    height: 80%;
+    width: 60%;
+    height: 100%;
     margin-left: 20%;
     margin-right: 20%;
     filter: drop-shadow(10px 10px 4px #000000);
@@ -133,9 +133,9 @@ header{width: 100%;
 .projects{display: flex;
     background-color: #00000000;
     width: 50%;
-    height: 10%;
+    height: 20%;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 7.5%;
     gap:5%;
     justify-content: space-between;
     position: absolute;
@@ -167,10 +167,16 @@ color: black;}
 }
 
 img{
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
     
 }
+
+.img2{
+    filter: blur(2px);
+}
+
 
 
 
