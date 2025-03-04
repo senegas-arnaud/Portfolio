@@ -1,0 +1,238 @@
+body {
+    background-color: rgb(31, 31, 31);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 101%;
+    margin-left: -1%;
+    text-align: center;
+    font-size: x-large;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0);
+    filter: drop-shadow(20px 20px 4px #000);
+}
+
+span {
+    display: inline-block;
+    background: linear-gradient(to left, #848080, #00f0f0 50%, #00f0f0 75%, #00f0f0 75%);
+    font-family: cursive;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.picts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0);
+    width: 90%;
+    height: 50vh;
+    margin: 2% auto;
+}
+
+.pict1 {
+    background-color: rgba(0, 0, 0, 0);
+    width: 85%;
+    height: 150%;
+    position: relative;
+    cursor: pointer;
+    margin-top: 15%;
+}
+
+.pict1 img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    position: absolute;
+}
+
+.text {
+    opacity: 0; 
+    visibility: hidden;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-size: 1.5em;
+    z-index: 2; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.pict1 .img1 {
+    opacity: 1;
+}
+
+.pict1 .img2 {
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.pict1:hover .img1 {
+    opacity: 0;
+}
+
+.pict1:hover .img2 {
+    opacity: 1;
+    filter: blur(3px);
+}
+
+.pict1:hover .text {
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.picture1, .picture2, .picture3, .picture4, .picture5 {
+    width: 19.75%;
+    height: 100%;
+    margin-right: 0.25%;
+}
+
+.picture1 img, .picture2 img, .picture3 img, .picture4 img, .picture5 img {
+    width: 100%;
+    height: 100%;
+}
+
+.additional-flexboxes {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.additional-flexboxes.show {
+    display: flex;
+}
+
+.flexbox {
+    width: 18%;
+    height: 80%;
+    margin: 0.5%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    border-style:ridge;
+    border-color: #00f0f0;
+    border-width: 2%;
+}
+
+.flexbox img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.close-btn:hover {
+    background-color: #ff1a1a;
+}
+
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: large;
+    margin-top: 15%;
+    width: 100%;
+}
+
+.link1 {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.link1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.link2 p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .pict1 {
+        width: 100%;
+        height: 60%;
+    }
+
+    .additional-flexboxes .flexbox {
+        width: 45%;
+        height: 20%;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .link1 {
+        margin-bottom: 10px;
+    }
+}
+
+.pict1::before, .pict1::after, .pict2::before, .pict2::after, .pict3::before, .pict3::after, .pict4::before, .pict4::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    background: linear-gradient(45deg,#848080,#00f0f0,#0000ff,#848080,#00f0f0,#0000ff,#848080);
+    width: 100%;
+    height: 100%;
+    background-size: 500%;
+    z-index: -1;
+    transform: scale(1.02);
+    animation:animate 20s infinite;
+}
+
+.pict1::after,.pict2::after,.pict3::after,.pict4::after,.pict5::after{
+    filter:blur(10px);
+}
+
+
+@keyframes animate{
+    0% {background-position: 0 0;}
+    50%{background-position: 300% 0;}
+    100%{background-position: 0 0;}
+}
+

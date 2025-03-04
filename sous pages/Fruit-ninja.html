@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="c:\Users\arnau\Documents\La Plateforme\Portfolio\sous pages\Fruit-ninja.css" rel="stylesheet" media="all" type="text/css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit-Ninja</title>
+</head>
+<body>
+    <header>
+        <h1>Pygame <span>Fruits Ninja</span></h1>
+    </header>
+    <main>
+        <div class="picts">
+            <div class="pict1" onclick="showFlexboxes()">
+                <img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\images\Fruits Ninja.gif" class="img1">
+                <img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\images\Fruits Ninja.gif" class="img2">
+                <div class="text">
+                    <h2>Fruits <span>Ninja</span></h2>
+                    <br>
+                    <p>User have to slash fruit using is keyboard. Your score grow with the number of fruits slashing. 
+                        Cutting an ice cube froze the board and allow you to cut all the fruits during this time. Missing 3 fruits or cutting a bomb is an instant game over.
+                        You can choose difficulty at the beginning and enter your name and register as a player at the end of the game.
+                    </p>
+                    <br></br>
+                    <p><span>Clic</span> to see full code</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-flexboxes" id="additional-flexboxes">
+            <button class="close-btn" onclick="closeFlexboxes()">×</button>
+            <div class="flexbox">
+                <img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\images\fruit-slicer\class-fruit.png">
+            </div>
+            <div class="flexbox">
+                <img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\images\fruit-slicer\class-game1.png">
+            </div>
+            <div class="flexbox">
+                <img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\images\fruit-slicer\classe-game2.png">
+            </div>
+            <div class="flexbox">
+                <img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\images\fruit-slicer\main1.png">
+            </div>
+            <div class="flexbox">
+                <img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\images\fruit-slicer\main2.png">
+            </div>
+        </div>
+
+        <div class="links">
+            <div class="link1">
+                <a href="https://github.com/senegas-arnaud/Fruit-Slicer"><img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\images\logo-github.png"></a>
+            </div>
+            <div class="link2">
+                <p><span>Clic to see full project on Github</span></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showFlexboxes() {
+            const additionalFlexboxes = document.getElementById('additional-flexboxes');
+            additionalFlexboxes.classList.add('show');
+        }
+
+        function closeFlexboxes() {
+            const additionalFlexboxes = document.getElementById('additional-flexboxes');
+            additionalFlexboxes.classList.remove('show');
+        }
+    </script>
+</body>
+</html>

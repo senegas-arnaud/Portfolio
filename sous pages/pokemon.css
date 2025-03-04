@@ -1,0 +1,225 @@
+body {
+    background-color: rgb(31, 31, 31);
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+header {
+    width: 101%;
+    margin-left: -1%;
+    text-align: center;
+    font-size: x-large;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0);
+    filter: drop-shadow(20px 20px 4px #000);
+}
+
+span {
+    display: inline-block;
+    background: linear-gradient(to left, #848080, #00f0f0 50%, #00f0f0 75%, #00f0f0 75%);
+    font-family: cursive;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.picts {
+    display: flex;
+    background-color: rgba(0, 0, 255, 0);
+    width: 96%;
+    height: 750px;
+    margin-left: 3%;
+    margin-right: 0%;
+    margin-top: 4%;
+}
+
+.pict1, .pict2, .pict3, .pict4 {
+    background-color: rgba(0, 0, 0, 0);
+    width: 23%;
+    height: 80%;
+    margin: 0.5%;
+    position: relative;
+    cursor: pointer;
+}
+
+.pict1 img, .pict2 img, .pict3 img, .pict4 img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    position: absolute;
+}
+
+.pict1 .img1, .pict2 .img1, .pict3 .img1, .pict4 .img1 {
+    opacity: 1;
+}
+
+.pict1 .img2, .pict2 .img2, .pict3 .img2, .pict4 .img2 {
+    opacity: 0;
+}
+
+.pict1:hover .img1, .pict2:hover .img1, .pict3:hover .img1, .pict4:hover .img1 {
+    opacity: 0;
+}
+
+.pict1:hover .img2, .pict2:hover .img2, .pict3:hover .img2, .pict4:hover .img2 {
+    opacity: 1;
+}
+
+.img2 {
+    filter: blur(3px);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    height: 95%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    text-align: center;
+    color: black;
+    font-size: x-large;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    height: 95%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    text-align: center;
+    color: whitesmoke;
+    font-size: x-large;
+}
+
+.text:hover, .texts:hover {
+    opacity: 1;
+}
+
+
+.additional-flexboxes {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.additional-flexboxes.show {
+    display: flex;
+}
+
+.flexbox {
+    width: 30%;
+    height: 80%;
+    margin: 0.5%;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 5%;
+    border-style:ridge;
+    border-color: #00f0f0;
+    border-width: 2%;
+    overflow: hidden;
+}
+
+.wide-flexbox {
+    width: 80%; 
+    height: 90%; 
+}
+
+.flexbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+
+#additional-flexboxes-3 .flexbox {
+    width: 18%; 
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.close-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: large;
+    margin-top: -5%;
+    width: 100%;
+}
+
+.link1 {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.link1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.link2 p {
+    margin: 0;
+}
+
+.pict1::before, .pict1::after, .pict2::before, .pict2::after, .pict3::before, .pict3::after, .pict4::before, .pict4::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    background: linear-gradient(45deg,#848080,#00f0f0,#0000ff,#848080,#00f0f0,#0000ff,#848080);
+    width: 100%;
+    height: 100%;
+    background-size: 500%;
+    z-index: -1;
+    transform: scale(1.02);
+    animation:animate 20s infinite;
+}
+
+.pict1::after,.pict2::after,.pict3::after,.pict4::after,.pict5::after{
+    filter:blur(10px);
+}
+
+
+@keyframes animate{
+    0% {background-position: 0 0;}
+    50%{background-position: 300% 0;}
+    100%{background-position: 0 0;}
+}
