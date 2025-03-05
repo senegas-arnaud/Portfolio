@@ -58,15 +58,16 @@ header {
 }
 
 .title h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     margin: 0;
     filter: drop-shadow(20px 20px 4px #000);
 }
 
 .titl p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 5px 0;
-    margin-top: 10%;
+    margin-top: 15%;
+    filter: drop-shadow(20px 20px 4px #000);
 }
 
 span{
@@ -79,57 +80,37 @@ span{
 }
 
 .links {
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
-.links h2 {
-    font-size: 2rem;
+#projectsButton {
+    background-color:#1f1f1f;
+    color: whitesmoke;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-style: ridge;
+    border-color: #00f0f0;
     filter: drop-shadow(20px 20px 4px #000);
 }
 
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 7%;
-    margin-top: 7%;
-    padding: 0 5%;
+#projectsButton:hover {
+    background:linear-gradient(to left, #848080,#00f0f0 50%, #00f0f0 75%, #00f0f0 75%);
+    transform: scale(1.15);
+    span{
+        display: inline-block;
+        background:linear-gradient(to left, #848080, #333 50%, #1f1f1f 75%, #000000 75%);
+        font-family:cursive;
+        background-clip: text;  
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; } 
 }
 
-.project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    filter: drop-shadow(10px 10px 4px #000);
-}
 
-.project img {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    transition: opacity 0.3s ease;
-    position: absolute;
-}
-
-.project .img1 {
-    opacity: 1;
-}
-
-.project .img2 {
-    opacity: 0;
-    filter: blur(2px);
-}
-
-.project:hover .img1 {
-    opacity: 0;
-}
-
-.project:hover .img2 {
-    opacity: 1;
-}
 
 
 @keyframes animate{
@@ -278,8 +259,65 @@ span{
     box-shadow: 40vmin 0 5.6645037003088525vmin currentColor;
 }
 
+.projects-grid {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 85%;
+    height: 85%;
+    border-radius: 10px;
+        }
 
-/* Responsive Design */
+.project-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border-style: ridge;
+    border-color: #00f0f0;
+        }
+
+.project-item img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+        }
+
+.project-item:hover img {
+    transform: scale(1.1);
+        }
+
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+        }
+
+.show-grid {
+    display: grid;
+        }
+
+.show-overlay {
+    display: block;
+        }
+
+
 @media (max-width: 768px) {
     .title h1 {
         font-size: 2rem;

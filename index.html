@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Sénégas Arnaud</title>
+    
 </head>
 <body>
     <header>
@@ -43,22 +44,88 @@
     </div>
 
     <div class="links">
-        <h2>My <span>Projects</span></h2>
+        <button id="projectsButton">My <span>Projects</span></button>
     </div>
 
-    <div class="projects">
-        <a href="\Portfolio\sous pages\Fruit-ninja.html" class="project">
-            <img src="\Portfolio\images\ninja.png" class="img1" title="Fruit-Ninja">
-            <img src="\Portfolio\images\ninja.png" class="img2" title="Fruit-Ninja">
-        </a>
-        <a href="\Portfolio\sous pages\pokemon.html" class="project" title="Pokemon-Fighting">
-            <img src="\Portfolio\images\pokemon-logo.png" class="img1" title="Pokemon-Fighting"> 
-            <img src="\Portfolio\images\pokemon-logo.png" class="img2">
-        </a>
-        <a href="\Portfolio\sous pages\allprojects.html" class="project">
-            <img src="\Portfolio\images\ALL-PROJECTS.png" class="img1" title="All-projects">
-            <img src="\Portfolio\images\ALL-PROJECTS.png" class="img2" title="All-projects">
-        </a> 
-    </div>  
+    <div class="overlay" id="overlay"></div>
+
+    <div class="projects-grid" id="projectsGrid">
+        <div class="project-item">
+            <a href="\Portfolio\sous pages\Fruit-ninja.html">
+                <img src="\Portfolio\Portfolio\images\logo-fruits.avif" alt="Fruit Ninja" title = "Fruits Ninja">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="\Portfolio\sous pages\pokemon.html">
+                <img src="c:\Users\arnau\Documents\La Plateforme\Portfolio\Portfolio\images\logo-poke.jpg" alt="Pokemon Fighting" title = "Pokemon Fighting">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="All Projects" title = "Coming soon">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="Project 4"title = "Coming soon" >
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="Project 5" title = "Coming soon">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="Project 6" title = "Coming soon">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="Project 7" title = "Coming soon">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="Project 8" title = "Coming soon">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="Project 9" title = "Coming soon">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="Project 10"title = "Coming soon" >
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\images\coming soon.gif" alt="Project 11" title = "Coming soon">
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="">
+                <img src="\Portfolio\images\coming soon.gif" alt="Project 12" title = "Coming soon">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const projectsButton = document.getElementById('projectsButton');
+        const projectsGrid = document.getElementById('projectsGrid');
+        const overlay = document.getElementById('overlay');
+
+        projectsButton.addEventListener('click', () => {
+            projectsGrid.classList.toggle('show-grid');
+            overlay.classList.toggle('show-overlay');
+        });
+
+        overlay.addEventListener('click', () => {
+            projectsGrid.classList.remove('show-grid');
+            overlay.classList.remove('show-overlay');
+        });
+    </script>
 </body>
 </html>
